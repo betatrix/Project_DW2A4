@@ -1,0 +1,46 @@
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+}
+
+body {
+ background-image: url(background.png);
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+
+/* Estilos da landing page */
+.landing-page {
+    display: flex;
+    align-items: center;
+}
+
+.landing-image {
+    flex: 1;
+    overflow: hidden;
+}
+
+.landing-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.landing-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.landing-content a {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}

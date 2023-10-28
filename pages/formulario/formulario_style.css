@@ -1,11 +1,18 @@
+/* ------------------- Definição de variáveis para as cores ------------------------*/
 :root {
-   --btn-color1: #8144f1;
-   --btn-color2: #9e75eb;
+   --btn-color1: #da5656;
+   --btn-color2: #EF9595;
    --btn-color-sucess: #65aa2c;
+   --purple-color: #ab82ec ;
    --white-color: #fdfdfd;
    --grey-color:#6b6b6b;
+   --filter: rgba(32, 32, 32, 0.781);
+   --shadow1: rgba(50, 50, 93, 0.25);
+   --shadow2: rgba(0, 0, 0, 0.3);
 }
 
+
+/* ------------------- Aplicavel em toda a página ------------------------*/
 * {
   font-family: "Montserrat", sans-serif;
   padding: 0;
@@ -21,20 +28,21 @@ body {
 }
 
 html {
-  background: linear-gradient(180deg, #9261ee 0%, #63acdd 100%);
+  background: linear-gradient(180deg, #EF9595 0%, #EDDFCD 100%);
 }
 
 input:focus {
   outline: none;
 }
 
+
+/* ------------------- Estilização do conteúdo ------------------------*/
 #register-container {
   max-width: 1000px;
   min-height: 80vh;
   margin: 2rem auto;
   display: flex;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: var(--shadow1) 0px 13px 27px -5px, var(--shadow2) 0px 8px 16px -8px;
 }
 
 #register-banner {
@@ -44,8 +52,10 @@ input:focus {
   width: 50%;
 }
 
+
+/* ------------------- Estilização da imagem ------------------------*/
 #banner-layer {
-  background-color: rgba(25, 11, 122, 0.7);
+  background-color: var(--filter);
   height: 100%;
   padding: 2rem;
   display: flex;
@@ -59,6 +69,8 @@ input:focus {
   word-spacing: 50rem;
 }
 
+
+/* ------------------- Estilização do formulário em si ------------------------*/
 #register-form {
   background-color: var(--white-color);
   padding: 2rem;
@@ -80,6 +92,8 @@ input:focus {
   font-size: 0.9rem;
 }
 
+
+/* ------------------- Estilização dos inputs ------------------------*/
 .form-control {
   margin-bottom: 1rem;
   display: flex;
@@ -97,6 +111,8 @@ input:focus {
   padding: 0.6rem 0;
 }
 
+
+/* ------------------- Estilização do gerador de senha ------------------------*/
 #open-generate-password {
   font-weight: bold;
   cursor: pointer;
@@ -144,7 +160,6 @@ input:focus {
   background-color: var(--btn-color2);
 }
 
-/* Segunda versão */
 #generate-options {
   margin-bottom: 1rem;
   padding: 1rem;
@@ -167,10 +182,12 @@ input:focus {
 
 }
 
+
+/* ------------------- Estilização do Checkbox ------------------------*/
 #generate-options input[type="checkbox"] {
   -webkit-appearance: none; /* Remove o estilo padrão do navegador */
   width: 30px; /* Largura desejada da checkbox */
-  border: 2px solid var(--btn-color-sucess); /* Cor da borda da checkbox */
+  border: 2px solid --purple-color; /* Cor da borda da checkbox */
   border-radius: 4px; /* Borda arredondada */
   background-color: #ffffff; /* Cor de fundo da checkbox */
   position: relative;
@@ -178,7 +195,7 @@ input:focus {
 }
 
 #generate-options input[type="checkbox"]:checked {
-  background-color: var(--btn-color-sucess); /* Cor de fundo quando marcado */
+  background-color: var(--purple-color); /* Cor de fundo quando marcado */
 }
 
 #generate-options input[type="checkbox"]::before {
@@ -197,7 +214,7 @@ input:focus {
 }
 
 
-
+/* ------------------- Estilização dos botoes ------------------------*/
 #generate-options button {
   background-color: var(--btn-color1);
   display: block;

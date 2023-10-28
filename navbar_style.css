@@ -6,6 +6,10 @@
     color: #333;
 }
 
+html {
+    background: linear-gradient(180deg, #EF9595 0%, #EDDFCD 100%);
+  }
+
 .navbar {
     background-color: #333;
     overflow: hidden;
