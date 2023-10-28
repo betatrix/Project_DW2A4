@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gerador de Senha</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/pages/formulario/formulario_style.css" />
+  <link rel="stylesheet" href="/navbar_style.css">
+  <script src="/pages/formulario/script.js" defer></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="/index.html">Home</a>
+    <a href="../adote/adote.html">Adote um animalzinho</a>
+    <a href="../FAQ/faq.html">Perguntas frequentes</a>
+    <a href="#">Cadastre-se!</a>
+  </div>
+
+  <!-- Corpo do formulário -->
+  <form>
+    <div id="register-container">
+      <div id="register-banner">
+        <div id="banner-layer">
+          <h1>Seja bem-vindo</h1>
+        </div>
+      </div>
+
+      <!-- Formulário de inscrição -->
+      <div id="register-form">
+        <h2>Cadastre-se!</h2>
+        <p>Preencha o formulário e entraremos em contato com você assim que possível 🐾</p>
+        <div class="form-control">
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" placeholder="Digite o seu nome" required /> <!--required: nescessário preencher-->
+        </div>
+        <div class="form-control">
+          <label for="name">CPF</label>
+          <input type="text" name="cpf" id="cpf" placeholder="Digite o seu CPF" required />
+        </div>
+        <div class="form-control">
+          <label for="name">Data de Nascimento (você precisa ter 18 anos)</label>
+          <input type="date" name="date" id="date" min="1920-01-01" max="2005-10-26" required />  <!--min e max: limite de data-->
+        </div>
+        <div class="form-control">
+          <label for="email">E-mail</label>
+          <input type="text" type="email" id="email" placeholder="Digite o seu e-mail" required />
+        </div>
+        <div class="form-control">
+          <label for="password">Senha</label>
+          <input type="password" type="password" id="password" placeholder="Digite a sua senha" required />
+        </div>
+        <div class="form-control">
+          <label for="confirmpassword">Confirmação de Senha</label>
+          <input type="password" type="confirmpassword" id="confirmpassword" placeholder="Confirme a sua senha"
+            required />
+        </div>
+
+
+        <!--Geração de senha-->
+        <p>
+          Quer ajuda para criar uma senha segura?
+          <span id="open-generate-password">Clique aqui.</span>
+        </p>
+        <div id="generate-options" class="hide">
+          <p>Selecione as opções que você deseja</p>
+          <div class="form-control">
+            <label for="length">Quantidade de caracteres:</label>
+            <input type="number" id="length" name="length" value="10" min="5" max="20" />
+          </div>
+          <div class="form-control">
+            <label for="letters">Letras:</label>
+            <input type="checkbox" id="letters" name="letters" checked />
+          </div>
+          <div class="form-control">
+            <label for="numbers">Números:</label>
+            <input type="checkbox" id="numbers" name="numbers" checked />
+          </div>
+          <div class="form-control">
+            <label for="symbols">Símbolos:</label>
+            <input type="checkbox" id="symbols" name="symbols" checked />
+          </div>
+          <button id="generate-password">Criar senha</button>
+        </div>
+        <div id="generated-password">
+          <p>Aqui está a sua senha:</p>
+          <h4></h4>
+          <button id="copy-password">Copiar</button>
+        </div>
+
+        <input type="submit" value="Cadastrar" />
+      </div>
+    </div>
+  </form>
+
+</body>
+
+</html>
