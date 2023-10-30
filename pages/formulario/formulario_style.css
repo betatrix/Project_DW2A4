@@ -45,21 +45,23 @@ input:focus {
   box-shadow: var(--shadow1) 0px 13px 27px -5px, var(--shadow2) 0px 8px 16px -8px;
 }
 
+
+/* ------------------- Estilização da imagem ------------------------*/
 #register-banner {
   background: url("./img/dog_forms.jpg");
   background-size: cover;
   background-position: center;
   width: 50%;
+  border-radius: 5px;
 }
 
-
-/* ------------------- Estilização da imagem ------------------------*/
 #banner-layer {
   background-color: var(--filter);
   height: 100%;
   padding: 2rem;
   display: flex;
   align-items: center;
+  border-radius: 5px;
 }
 
 #register-banner h1 {
@@ -77,6 +79,7 @@ input:focus {
   width: 60%;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
 }
 
 #register-form h2 {
