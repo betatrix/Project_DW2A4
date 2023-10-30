@@ -1,19 +1,21 @@
 html,
 body {
-  height: auto;
-  min-height: 100vh;
+    height: auto;
+    min-height: 100vh;
 }
 
 body {
- background-image: url(background.png);
- background-size: cover;
- background-repeat: no-repeat;
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .landing-page {
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    height: 90vh; /* Define a altura total da janela de visualização */
+    align-items: center;
+    /* Centraliza verticalmente */
+    height: 90vh;
+    /* Define a altura total da janela de visualização */
 }
 
 .landing-content {

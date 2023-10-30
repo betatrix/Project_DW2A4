@@ -1,21 +1,75 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
-    <link rel="stylesheet" href="../../navbar_style.css">
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/navbar_style.css">
     <link rel="stylesheet" href="faq_style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="navbar">
+        <img src="../../img/pet-care.png" class="navbar-icon">
         <a href="../../index.html">Home</a>
         <a href="../adote/adote.html">Adote um animalzinho</a>
         <a href="#">Perguntas frequentes</a>
         <a href="../formulario/formulario.html">Cadastre-se!</a>
     </div>
+
+    <div class="container">
+        <section class="introduction">
+            <h1>FAQ - Perguntas Frequentes</h1>
+            <p>Encontre respostas para suas perguntas comuns sobre adoção de animais e nosso compromisso com o bem-estar
+                dos pets.</p>
+        </section>
+
+
+        <!-- Criação da lista dropdown -->
+        <section class="questions">
+            <details>
+                <summary> Como funciona o processo de adoção?</summary>
+                <p>O processo de adoção envolve o preenchimento de um formulário de adoção, entrevistas e visitas ao
+                    animal. Depois de aprovado, você poderá levar seu novo companheiro para casa.</p>
+            </details>
+
+            <details>
+                <summary>Quais animais estão disponíveis para adoção?</summary>
+                <p>Em nosso site, você encontrará cães e gatos resgatados em busca de lares amorosos. Verifique
+                    regularmente as atualizações em nosso site para conhecer os animais disponíveis.</p>
+            </details>
+
+            <details>
+                <summary> Os animais estão em boas condições de saúde?</summary>
+                <p>Sim, todos os animais disponíveis para adoção são cuidados e tratados por profissionais de saúde
+                    veterinária. </p>
+            </details>
+
+            <details>
+                <summary> Posso adotar um animal se eu já tiver outros animais de estimação?</summary>
+                <p>Sim, é possível adotar um animal mesmo se você já tiver outros animais de estimação. No entanto,
+                    recomendamos uma introdução gradual e supervisionada para garantir uma transição suave.</p>
+            </details>
+
+            <details>
+                <summary>Como entro em contato com o Projeto Peludinhos?</summary>
+                <p>Você pode nos contatar por meio do formulário de contato em nosso site ou por <a
+                        href="mailto:beatriz.andrade1@aluno.ifsp.edu.br?subject=Dúvidas sobre adoção">e-mail</a>.
+                    Estamos aqui para responder a todas as suas perguntas e ajudá-lo na adoção de um novo amigo peludo.
+                </p>
+            </details>
+
+            <details>
+                <summary>Como posso apoiar o projeto?</summary>
+                <p>Você pode apoiar nosso projeto fazendo doações, voluntariando-se ou compartilhando nossos animais
+                    disponíveis para adoção em suas redes sociais. Toda ajuda é bem-vinda!</p>
+            </details>
+        </section>
+    </div>
 </body>
+
 </html>

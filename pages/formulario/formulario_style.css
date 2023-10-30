@@ -1,14 +1,14 @@
 /* ------------------- Definição de variáveis para as cores ------------------------*/
 :root {
-   --btn-color1: #da5656;
-   --btn-color2: #EF9595;
-   --btn-color-sucess: #65aa2c;
-   --purple-color: #ab82ec ;
-   --white-color: #fdfdfd;
-   --grey-color:#6b6b6b;
-   --filter: rgba(32, 32, 32, 0.781);
-   --shadow1: rgba(50, 50, 93, 0.25);
-   --shadow2: rgba(0, 0, 0, 0.3);
+  --btn-color1: #da5656;
+  --btn-color2: #EF9595;
+  --btn-color-sucess: #65aa2c;
+  --purple-color: #ab82ec;
+  --white-color: #fdfdfd;
+  --grey-color: #6b6b6b;
+  --filter: rgba(32, 32, 32, 0.781);
+  --shadow1: rgba(50, 50, 93, 0.25);
+  --shadow2: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -188,32 +188,43 @@ input:focus {
 
 /* ------------------- Estilização do Checkbox ------------------------*/
 #generate-options input[type="checkbox"] {
-  -webkit-appearance: none; /* Remove o estilo padrão do navegador */
-  width: 30px; /* Largura desejada da checkbox */
-  border: 2px solid --purple-color; /* Cor da borda da checkbox */
-  border-radius: 4px; /* Borda arredondada */
-  background-color: #ffffff; /* Cor de fundo da checkbox */
+  -webkit-appearance: none;
+  /* Remove o estilo padrão do navegador */
+  width: 30px;
+  /* Largura desejada da checkbox */
+  border: 2px solid --purple-color;
+  /* Cor da borda da checkbox */
+  border-radius: 4px;
+  /* Borda arredondada */
+  background-color: #ffffff;
+  /* Cor de fundo da checkbox */
   position: relative;
-  transition: 0.3s ease; /* Transição suave da cor de fundo */
+  transition: 0.3s ease;
+  /* Transição suave da cor de fundo */
 }
 
 #generate-options input[type="checkbox"]:checked {
-  background-color: var(--purple-color); /* Cor de fundo quando marcado */
+  background-color: var(--purple-color);
+  /* Cor de fundo quando marcado */
 }
 
 #generate-options input[type="checkbox"]::before {
-  content: '\2713'; /* Símbolo de marcação (✓) quando marcado */
-  font-size: 15px; /* Tamanho da marca de verificação */
+  content: '\2713';
+  /* Símbolo de marcação (✓) quando marcado */
+  font-size: 15px;
+  /* Tamanho da marca de verificação */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--white-color); /* Cor da marca de verificação */
+  color: var(--white-color);
+  /* Cor da marca de verificação */
   display: none;
 }
 
 #generate-options input[type="checkbox"]:checked::before {
-  display: block; /* Mostra a marca de verificação quando marcado */
+  display: block;
+  /* Mostra a marca de verificação quando marcado */
 }
 
 

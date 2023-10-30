@@ -8,22 +8,34 @@
 
 html {
     background: linear-gradient(180deg, #EF9595 0%, #EDDFCD 100%);
-  }
+}
 
 .navbar {
     background-color: #333;
     overflow: hidden;
+    display: flex;
+    /* Torna os elementos filhos flexíveis */
+    align-items: center;
+    /* Alinha os elementos verticalmente ao centro */
 }
 
 .navbar a {
-    float: left;
     display: block;
     color: white;
     text-align: center;
     padding: 20px 16px;
     text-decoration: none;
     transition: 0.4s ease;
+    position: relative;
 }
+
+.navbar .navbar-icon {
+    margin-right: 5px;
+    /* Adicione margem direita para criar espaço entre a imagem e o texto */
+    margin-left: 10px;
+    max-width: 70px;
+}
+
 
 .navbar a:hover {
     background-color: #ddd;
