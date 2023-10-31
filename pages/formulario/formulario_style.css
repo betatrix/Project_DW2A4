@@ -114,6 +114,10 @@ input:focus {
   padding: 0.6rem 0;
 }
 
+.errorInput {
+  border: 2px solid rgb(207,53,53) !important;
+}
+
 
 /* ------------------- Estilização do gerador de senha ------------------------*/
 #open-generate-password {
