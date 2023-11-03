@@ -114,10 +114,6 @@ input:focus {
   padding: 0.6rem 0;
 }
 
-.errorInput {
-  border: 2px solid rgb(207,53,53) !important;
-}
-
 
 /* ------------------- Estilização do gerador de senha ------------------------*/
 #open-generate-password {
@@ -148,7 +144,7 @@ input:focus {
   margin-bottom: 0.5rem;
 }
 
-#register-form input[type="submit"],
+#register-form .enviar,
 #generate-options button,
 #copy-password {
   background-color: var(--btn-color1);
@@ -163,7 +159,7 @@ input:focus {
   transition: 0.4s;
 }
 
-#register-form input[type="submit"]:hover {
+#register-form .enviar:hover {
   background-color: var(--btn-color2);
 }
 
@@ -260,4 +256,20 @@ input:focus {
 
 .hide {
   display: none;
+}
+
+
+/* ------------------- Estilização do erro de validação ------------------------*/
+.errorInput {
+  background-color: #d11c1c1f !important;
+}
+
+.red-placeholder::placeholder {
+  color: rgb(136, 8, 8);
+}
+
+#cpfError,
+#cepError {
+  font-size: 12px;
+  color: red;
 }

@@ -10,14 +10,15 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="formulario_style.css" />
-  <link rel="stylesheet" href="../../css/navbar_style.css">
+  <link rel="stylesheet" href="../../index_style/css/navbar_style.css">
+  <link rel="icon" type="image/x-icon" href="../../index_style/img/paw.png">
   <script src="script.js" defer></script>
 </head>
 
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <img src="../../img/pet-care.png" class="navbar-icon">
+    <img src="../../index_style/img/pet-care.png" class="navbar-icon">
     <a href="../../index.html">Home</a>
     <a href="../adote/adote.html">Adote um animalzinho</a>
     <a href="../FAQ/faq.html">Perguntas frequentes</a>
@@ -38,43 +39,40 @@
         <h2>Cadastre-se!</h2>
         <p>Preencha o formulário e entraremos em contato com você assim que possível 🐾</p>
         <div class="form-control">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name" placeholder="Digite o seu nome completo" required />
+          <label for="name" id="nameLabel">Nome</label>
+          <input type="text" id="name" placeholder="Digite o seu nome completo" required />
           <!--required: nescessário preencher-->
         </div>
         <div class="form-control">
-          <label for="cpf">CPF</label>
-          <input type="text" name="cpf" id="cpf" placeholder="Digite o seu CPF" required />
+          <label for="cpf" id="cpfLabel">CPF</label>
+          <div id="cpfError"></div>
+          <input type="text" id="cpf" placeholder="Digite o seu CPF" required />
         </div>
         <div class="form-control">
-          <label for="date">Data de Nascimento (você precisa ter 18 anos)</label>
-          <input type="date" name="date" id="date" min="1920-01-01" max="2005-10-26" required />
+          <label for="date" id="dateLabel">Data de Nascimento (você precisa ter 18 anos)</label>
+          <input type="date" id="date" min="1920-01-01" max="2005-10-26" required />
           <!--min e max: limite de data-->
         </div>
         <div class="form-control">
-          <label for="email">E-mail</label>
-          <input type="text" type="email" id="email" placeholder="Digite o seu e-mail" required />
+          <label for="email" id="emailLabel">E-mail</label>
+          <input type="email" id="email" placeholder="Digite o seu e-mail" required />
         </div>
         <div class="form-control">
-          <label for="cep">CEP</label>
-          <input type="text" type="cep" id="cep" placeholder="Digite o seu CEP" required />
+          <label for="cep" id="cepLabel">CEP</label>
+          <div id="cepError"></div>
+          <input type="text" id="cep" placeholder="Digite o seu CEP" required />
         </div>
         <div class="form-control">
-          <label for="address">Endereço</label>
+          <label for="address" id="addressLabel">Endereço</label>
           <input type="text" id="address" placeholder="Digite o seu endereço" required />
         </div>
         <div class="form-control">
-          <label for="number">Número</label>
-          <input type="text" id="number" placeholder="Digite o seu número" required />
+          <label for="password" id="passwordLabel">Senha</label>
+          <input type="password" id="password" placeholder="Digite a sua senha" required />
         </div>
         <div class="form-control">
-          <label for="password">Senha</label>
-          <input type="password" type="password" id="password" placeholder="Digite a sua senha" required />
-        </div>
-        <div class="form-control">
-          <label for="confirmpassword">Confirmação de Senha</label>
-          <input type="password" type="confirmpassword" id="confirmpassword" placeholder="Confirme a sua senha"
-            required />
+          <label for="confirmpassword" id="confirmLabel">Confirmação de Senha</label>
+          <input type="password" id="confirm" placeholder="Confirme a sua senha" required />
         </div>
 
 
@@ -109,7 +107,7 @@
           <button id="copy-password">Copiar</button>
         </div>
 
-        <input type="submit" value="Cadastrar" />
+        <button class="enviar" onclick=enviar()>Enviar</button>
       </div>
     </div>
   </form>
