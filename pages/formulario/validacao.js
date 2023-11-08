@@ -45,45 +45,60 @@ cep.addEventListener('input', async (e) => {
 
 // ---------------UTILIZAÇÃO DO FETCH PARA CONSUMIR A API DA VIACEP--------------------------------------------------
 async function buscaCEP(cep) {
-  let busca = cep.replace('-', '');
-  const option = {
-    method: 'get',
-    mode: 'cors',
-    cache: 'default'
-  }
-  const response = await fetch(`https://viacep.com.br/ws/${busca}/json/`, option);
+  return new Promise(async (resolve, reject) => {
+    let busca = cep.replace('-', '');
+    const option = {
+      method: 'get',
+      mode: 'cors',
+      cache: 'default'
+    };
 
-  const cepInfo = await response.json();
-  if (cepInfo.erro) {
-    return false;
-  }
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${busca}/json/`, option);
+      const cepInfo = await response.json();
 
-  return cepInfo;
+      if (cepInfo.erro) {
+        reject('CEP inválido');
+      } else {
+        resolve(cepInfo);
+      }
+    } catch (error) {
+      reject('Erro na busca de CEP');
+    }
+  });
 }
 
 
 
 // ---------------VERIFICAÇÃO NÚMERICA DO CPF------------------------------------------------------------------------------
-function TestaCPF(validarCpf) {
-  var Soma;
-  var Resto;
-  Soma = 0;
-  if (validarCpf == "00000000000") return false; // CPF com todos os dígitos iguais é inválido
+function TestaCPF(cpf) {
+  return new Promise((resolve, reject) => {
+    var Soma;
+    var Resto;
+    Soma = 0;
+    if (cpf == "00000000000") {
+      reject('CPF inválido');
+    }
 
-  for (i = 1; i <= 9; i++) Soma = Soma + parseInt(validarCpf.substring(i - 1, i)) * (11 - i);
-  Resto = (Soma * 10) % 11;
+    for (i = 1; i <= 9; i++) Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
+    Resto = (Soma * 10) % 11;
 
-  if ((Resto == 10) || (Resto == 11)) Resto = 0;
-  if (Resto != parseInt(validarCpf.substring(9, 10))) return false;
+    if (Resto == 10 || Resto == 11) Resto = 0;
+    if (Resto != parseInt(cpf.substring(9, 10))) {
+      reject('CPF inválido');
+    }
 
-  Soma = 0;
-  for (i = 1; i <= 10; i++) Soma = Soma + parseInt(validarCpf.substring(i - 1, i)) * (12 - i);
-  Resto = (Soma * 10) % 11;
+    Soma = 0;
+    for (i = 1; i <= 10; i++) Soma = Soma + parseInt(cpf.substring(i - 1, i)) * (12 - i);
+    Resto = (Soma * 10) % 11;
 
-  if ((Resto == 10) || (Resto == 11)) Resto = 0;
-  if (Resto != parseInt(validarCpf.substring(10, 11))) return false;
+    if (Resto == 10 || Resto == 11) Resto = 0;
+    if (Resto != parseInt(cpf.substring(10, 11))) {
+      reject('CPF inválido');
+    }
 
-  return true; // Se a validação for bem-sucedida, o CPF é considerado válido
+    resolve(true); // CPF válido
+  });
 }
 
 

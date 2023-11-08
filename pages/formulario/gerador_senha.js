@@ -42,7 +42,8 @@ const generatePassword = (
     getLetterLowerCase,
     getLetterUpperCase,
     getNumber,
-    getSymbol
+    getSymbol,
+    callback
 ) => {
     let password = "";
 
@@ -65,6 +66,7 @@ const generatePassword = (
 
     // Se nenhuma opção estiver selecionada, encerre a função
     if (generators.length === 0) {
+        callback('Selecione pelo menos uma opção para gerar senha.');
         return;
     }
 
@@ -84,6 +86,7 @@ const generatePassword = (
     // Exiba a senha gerada na interface do usuário
     generatedPasswordElement.style.display = "block";
     generatedPasswordElement.querySelector("h4").innerText = password;
+    callback(null, password);
 };
 
 
@@ -93,8 +96,11 @@ generatePasswordButton.addEventListener("click", () => {
         getLetterLowerCase,
         getLetterUpperCase,
         getNumber,
-        getSymbol
-    );
+        getSymbol, (error, password) => {
+            if (error) {
+                alert("Selecione pelo menos uma opção para gerar senha.");
+            }
+        });
 });
 
 // Adicione um ouvinte de eventos ao botão "Abrir/Fechar Gerador de Senha"
