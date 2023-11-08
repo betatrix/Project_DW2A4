@@ -98,7 +98,7 @@ generatePasswordButton.addEventListener("click", () => {
         getNumber,
         getSymbol, (error, password) => {
             if (error) {
-                alert("Selecione pelo menos uma opção para gerar senha.");
+                alert(error);
             }
         });
 });
